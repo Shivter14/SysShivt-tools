@@ -1,3 +1,3 @@
 tiktok: @shivtershivtik25
 
-New releases comming soon!
+New releases of SysShivt tools 3 every day!
