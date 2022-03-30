@@ -5,7 +5,7 @@ if "%sst.dir%" equ "" (
 	goto end
 )
 :start
-color 0f
+color f0
 mode 96,25
 cls
 echo.$debug=%sst.errorlevel%
