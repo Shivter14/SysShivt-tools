@@ -5,7 +5,7 @@ if "%sst.dir%" equ "" (
 	goto end
 )
 :start
-color f0
+color 0f
 mode 96,25
 cls
 echo.$debug=%sst.errorlevel%
@@ -15,5 +15,7 @@ echo.  [BACKSPACE] / [ESC] = exit
 getinput
 set sst.errorlevel=%errorlevel%
 set errorlevel=
+if "%sst.errorlevel%" equ "8" goto end
+if "%sst.errorlevel%" equ "27" goto end
 goto start
 :end
