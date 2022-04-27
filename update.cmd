@@ -8,8 +8,8 @@ echo.Downloading lates version
 call "%sst.dir%\spin.cmd" 26 7 4 0f /c
 if not exist sstoolsupdate md sstoolsupdate
 cd sstoolsupdate
-call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/SysShivt-tools-3-0-b-0329.zip" SysShivt-tools-3-0-b-0329.zip
-if not exist "SysShivt-tools-3-0-b-0329.zip" (
+call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/SysShivt-tools-3-0-0-0427.zip" SysShivt-tools-3-0-0-0427.zip
+if not exist "SysShivt-tools-3-0-0-0427.zip" (
   echo.Download failed!
   pause
 ) else (
