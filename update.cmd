@@ -1,5 +1,5 @@
 @echo off
-set sst.updatever=3.0.b
+set sst.updatever=3.0.0
 if "%sst.ver%" equ "%sst.updatever%" goto uptolate
 echo.Update avalible!
 echo.Current version: %sst.ver%
