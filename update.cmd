@@ -13,8 +13,8 @@ if exist "%sst.dir%\spin.cmd" (
 if not exist sstoolsupdate md sstoolsupdate
 cd sstoolsupdate
 if exist "SysShivt-tools-3-0-0-0427.zip" del "SysShivt-tools-3-0-0-0427.zip"
-call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/SysShivt-tools-3-0-0-0427.zip" SysShivt-tools-3-0-0-0427.zip
-if not exist "SysShivt-tools-3-0-0-0427.zip" (
+call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/SysShivt-tools-3-0-1-0505.zip" SysShivt-tools-3-0-1-0505.zip
+if not exist "SysShivt-tools-3-0-1-0505.zip" (
   echo.Download failed!
   pause
 ) else (
