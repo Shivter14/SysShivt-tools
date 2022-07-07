@@ -20,7 +20,7 @@ if not exist "%sst.updatefile%" (
 )
 goto end
 :uptolate
-echo.You are up to late! [build: 0526]
+echo.You are up to late! [build: 0707]
 pause
 goto end
 :dev
