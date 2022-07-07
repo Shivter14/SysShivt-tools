@@ -1,7 +1,7 @@
 @echo off
 set sst.updatever=3.1.0
 set sst.updatefile=SysShivt-tools-3-1-0-0707.zip
-if "%sst.ver%" equ "%sst.updatever%" goto uptolate
+if "%sst.ver%" equ "%sst.updatever%" goto UpToLate
 if "%sst.ver%" equ "3.1.i" goto dev
 echo.Update avalible! [build: 0526]
 echo.Current version: %sst.ver%
@@ -19,7 +19,7 @@ if not exist "%sst.updatefile%" (
   start .
 )
 goto end
-:uptolate
+:UpToLate
 echo.You are up to late! [build: 0707]
 pause
 goto end
