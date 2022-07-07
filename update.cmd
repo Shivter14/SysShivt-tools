@@ -6,8 +6,8 @@ if "%sst.ver%" equ "3.1.i" goto dev
 echo.Update avalible! [build: 0526]
 echo.Current version: %sst.ver%
 echo.Update version: %sst.updatever%
-echo.Downloading lates version
-call spin 26 7 4 0f /c
+echo.Downloading lates version. . .
+timeout 1 /nobreak > nul
 if not exist sstoolsupdate md sstoolsupdate
 cd sstoolsupdate
 if exist "%sst.updatefile%" del "%sst.updatefile%"
