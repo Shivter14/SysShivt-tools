@@ -1,6 +1,6 @@
 @echo off
 set sst.updatever=3.0.2
-set sst.updatefile=SysShivt-tools-3-0-2-0526.zip
+set sst.updatefile=SysShivt-tools-3-1-0-0707.zip
 if "%sst.ver%" equ "%sst.updatever%" goto uptolate
 echo.Update avalible! [build: 0526]
 echo.Current version: %sst.ver%
