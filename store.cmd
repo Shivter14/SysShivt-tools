@@ -1,5 +1,5 @@
 @echo off
-if "%sst.dir%" equ "" (
+if "%sst.ver%" equ "" (
 	echo.This program requires SysShivt tools.
 	timeout 5 > nul
 	goto end
@@ -13,18 +13,15 @@ echo.  Welcome to SysShivt tools store %ls.username%.
 echo.  [BACKSPACE] / [ESC] = exit
 echo.
 echo.  Games:
-echo.  [  Fish Game by Shivter  ]    [      NotAVirus.cmd     ]
+echo.  1 = FishGame
+echo.  2 = DontDownloadMe
 getinput
 set sst.errorlevel=%errorlevel%
 set errorlevel=
 if "%sst.errorlevel%" equ "8" goto end
 if "%sst.errorlevel%" equ "27" goto end
-if %sst.errorlevel% leq -327682 (
-	if %sst.errorlevel% geq -327707 goto installfishgame
-)
-if %sst.errorlevel% leq -327712 (
-	if %sst.errorlevel% geq -327737 goto installvirus
-)
+if "%sst.errorlevel%" equ "49" goto installfishgame
+if "%sst.errorlevel%" equ "50" goto installvirus
 goto start
 :installfishgame
 if not exist "..\downloads" md "..\downloads"
