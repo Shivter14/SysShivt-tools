@@ -30,5 +30,5 @@ echo. You are up to late! [build: %sst.updatebuild%]
 if "%sst.updateargs%" neq "/silent" pause
 goto end
 :dev
-echo. You are the lates developer edition.
+echo. You are running the lates developer edition.
 :end
