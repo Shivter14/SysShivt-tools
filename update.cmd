@@ -7,7 +7,7 @@ echo.
 if "%sst.ver%" equ "%sst.updatever%" goto UpToLate
 if "%sst.ver%" equ "3.1.g" goto dev
 for %%a in (
-  "Update avalible! [build: %sst.updatebuild%]"
+  "Update avalible!"
   "Current version: %sst.ver%"
   "Update version: %sst.updatever%"
   ""
