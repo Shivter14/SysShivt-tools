@@ -13,7 +13,6 @@ for %%a in (
   ""
   "Downloading lates version. . ."
  ) do echo. %%~a
-timeout 1 /nobreak > nul
 if not exist sstoolsupdate md sstoolsupdate
 cd sstoolsupdate
 if exist "%sst.updatefile%" del "%sst.updatefile%"
@@ -24,6 +23,7 @@ if "%sst.updateargs%" neq "/silent" if not exist "%sst.updatefile%" (
 ) else (
   start .
 )
+set sst.update=True
 goto end
 :UpToLate
 echo. You are up to late! [build: %sst.updatebuild%]
