@@ -5,7 +5,7 @@ set sst.updatefile=SysShivt-tools-3-1-1-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 echo.
 if "%sst.ver%" equ "%sst.updatever%" goto UpToLate
-if "%sst.ver%" equ "3.1.i" goto dev
+if "%sst.ver%" equ "3.1.g" goto dev
 for %%a in (
   "Update avalible! [build: %sst.updatebuild%]"
   "Current version: %sst.ver%"
