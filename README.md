@@ -20,3 +20,11 @@
    
    step 7: Run the file SSVM.cmd, and enjoy SysShivt tools!
 ```
+
+# Change Log
+
+## SysShivt tools 3.1.2 Change log
+```
+Fixed bugs.
+Updated features.
+```
