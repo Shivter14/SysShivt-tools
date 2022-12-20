@@ -1,7 +1,7 @@
 @echo off
 set sst.updatever=3.1.2
 set sst.updatebuild=1220
-set sst.updatefile=SysShivt-tools-3-1-1-%sst.updatebuild%.zip
+set sst.updatefile=SysShivt-tools-3-1-2-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 echo.
 if "%sst.ver%" equ "%sst.updatever%" goto UpToLate
