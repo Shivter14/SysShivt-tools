@@ -1,7 +1,7 @@
 # Welcome to SysShivt tools official download server.
 ## tiktok: @shivtershivtik25
 
-## Lates version: 3.1.1
+## Lates version: 3.1.2
 
 # How to install sysshivt tools
 ```
@@ -12,7 +12,7 @@
    
    step 3: Extract the files from the archive you downloaded to the new folder
    
-   step 4: Download the lates SysShivt tools zip file [SysShivt-tools-3-1-1-0831.zip]
+   step 4: Download the lates SysShivt tools zip file [SysShivt-tools-3-1-2-1220.zip]
    
    step 5: Create a new folder called "C" in the folder you created earlier
    
