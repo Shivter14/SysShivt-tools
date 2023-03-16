@@ -4,15 +4,15 @@ set sst.updatebuild=1220
 set sst.updatefile=SysShivt-tools-3-1-2-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 echo.
-if "%sst.ver%" equ "%sst.updatever%" goto UpToLate
-if "%sst.ver%" equ "3.1.b" goto dev
+if %sst.build% gtr %sst.updatebuild% goto dev
+if "%sst.build%" equ "%sst.updatebuild%" goto UpToLate
 for %%a in (
   "New update is avalible."
   "Current version: %sst.ver%"
-  "Update version: %sst.updatever%"
+  "Lates version: %sst.updatever%"
   ""
-  "Downloading lates version. . ."
- ) do echo. %%~a
+  "Downloading the lates version. . ."
+ ) do echo.  %%~a
 if not exist sstoolsupdate md sstoolsupdate
 cd sstoolsupdate
 if exist "%sst.updatefile%" del "%sst.updatefile%"
@@ -20,15 +20,17 @@ call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/%sst.upd
 if "%sst.updateargs%" neq "/silent" if not exist "%sst.updatefile%" (
   echo.  Download failed! Press any key to exit. . .
   pause>nul
-) else (
-  start .
-)
+) else start .
 set sst.update=True
 goto end
 :UpToLate
-echo. You are up to late! [build: %sst.updatebuild%]
+echo.  You are up to late! [build: %sst.updatebuild%]
 if "%sst.updateargs%" neq "/silent" pause
 goto end
 :dev
-echo. You are running the lates developer edition.
+for %%a in (
+  "You are running the lates developer edition."
+  "Current version: %sst.ver%"
+  "Lates version: %sst.updatever%"
+) do echo.  %%~a
 :end
