@@ -1,25 +1,34 @@
 # Welcome to SysShivt tools official download server.
 ## tiktok: @shivtershivtik25
 
-## Lates version: 3.1.2
+## Lates version: 3.1.3
 
 # How to install sysshivt tools
-```
+```You need SSVM 2.4.2 to 2.5.0 to install the lates version
+of SysShivt tools.
 
-   step 1: Download the lates SSVM zip file. [SSVM-2-4-4.zip]
-           
-   step 2: Create a folder on your desktop, name it however you want..
-   
-   step 3: Extract the files from the archive you downloaded to the new folder.
-   
-   step 4: Download the lates SysShivt tools zip file. [SysShivt-tools-3-1-3-1603.zip]
-   
-   step 5: Create a new folder called "C" in the folder you created earlier.
-   
-   step 6: Extract the files from the SysShivt tools archive you downloaded to the folder "C" you created earlier.
-   
-   step 7: Run the file SSVM.cmd in the folder you created earlier.
-   
-   step 8: Follow the instructions from the installer.
-
-```
+How to install SysShivt tools:
+1:  If you don't have SSVM, install it.
+    How to install SSVM:
+    1:  Download the zip file: "SSVM-2-4-4.zip"
+    2:  Extract the zip file.
+2:  Open SSVM. (SSVM.cmd)
+3:  Spam any key to enter the boot menu.
+4:  Press X, and then press 2.
+5:  Download the zip file: "SysShivt-tools-3-1-3-1603.zip"
+6:  Drag the zip file into the SSVM window.
+    (it should automatically enter the full path of the
+    zip file. If it doesn't, just type the full path of
+    the zip file manually.)
+7:  Press ENTER to continue to the installer
+8:  Press Y
+9:  Now the installer will ask you what version to
+    install. Type "sysshivt-tools" and press ENTER.
+10: Select a SSVM virtual drive you want to install
+    SysShivt tools to (Theese drives are just virtual
+    drives stored in the SSVM directory) (Recommended: C)
+11: Press any key to install SysShivt tools
+After installing sysshivt tools, just boot into the SSVM
+virtual drive selected [If you didn't install SysShivt
+tools to the C drive, spam any key to enter the boot
+menu]```
