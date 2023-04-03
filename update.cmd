@@ -24,7 +24,7 @@ if "%sst.updateargs%" neq "/silent" if not exist "%sst.updatefile%" (
 set sst.update=True
 goto end
 :UpToLate
-echo.  You are up to late! [build: %sst.updatebuild%]
+echo.  You are up to date. [build: %sst.updatebuild%]
 if "%sst.updateargs%" neq "/silent" pause
 goto end
 :dev
