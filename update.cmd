@@ -9,7 +9,7 @@ if "%sst.build%" equ "%sst.updatebuild%" goto UpToLate
 for %%a in (
   "New update is avalible."
   "Current version: %sst.ver%"
-  "Lates version: %sst.updatever%"
+  "Latest version: %sst.updatever%"
   ""
   "Downloading the lates version. . ."
  ) do echo.  %%~a
@@ -29,8 +29,8 @@ if "%sst.updateargs%" neq "/silent" pause
 goto end
 :dev
 for %%a in (
-  "You are running the lates developer edition."
+  "You are running the latest developer edition."
   "Current version: %sst.ver%"
-  "Lates version: %sst.updatever%"
+  "Latest version: %sst.updatever%"
 ) do echo.  %%~a
 :end
