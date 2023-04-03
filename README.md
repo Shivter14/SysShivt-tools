@@ -13,7 +13,7 @@ How to install SysShivt tools:
     How to install SSVM:
     1:  Download the zip file: "SSVM-2-4-4.zip"
     2:  Extract the zip file.
-2:  Open SSVM. (SSVM.cmd)
+2:  Run SSVM. (SSVM.cmd)
 3:  Spam any key to enter the boot menu.
 4:  Press X, and then press 2.
 5:  Download the zip file: "SysShivt-tools-3-1-3-1603.zip"
