@@ -1,7 +1,7 @@
 @echo off
 set sst.updatever=3.1.4
 set sst.updatebuild=1830
-set sst.updatefile=SysShivt-tools-3-1-3-%sst.updatebuild%.zip
+set sst.updatefile=SysShivt-tools-3-1-4-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 echo.
 if %sst.build% gtr %sst.updatebuild% goto dev
