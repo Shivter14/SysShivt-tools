@@ -1,7 +1,7 @@
 # Welcome to SysShivt tools official download server.
 ## tiktok: @shivtershivtik25
 
-## Lates version: 3.1.3
+## Latest version: 3.1.4
 
 # How to install sysshivt tools
 ```
@@ -16,7 +16,7 @@ How to install SysShivt tools:
 2:  Run SSVM. (SSVM.cmd)
 3:  Spam any key to enter the boot menu.
 4:  Press X, and then press 2.
-5:  Download the zip file: "SysShivt-tools-3-1-3-1603.zip"
+5:  Download the zip file: "SysShivt-tools-3-1-4-1830.zip"
 6:  Drag the zip file into the SSVM window.
     (it should automatically enter the full path of the
     zip file. If it doesn't, just type the full path of
