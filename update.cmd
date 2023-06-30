@@ -1,6 +1,6 @@
 @echo off
-set sst.updatever=3.1.3
-set sst.updatebuild=1603
+set sst.updatever=3.1.4
+set sst.updatebuild=1830
 set sst.updatefile=SysShivt-tools-3-1-3-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 echo.
@@ -11,7 +11,7 @@ for %%a in (
   "Current version: %sst.ver%"
   "Latest version: %sst.updatever%"
   ""
-  "Downloading the lates version. . ."
+  "Downloading the latest version. . ."
  ) do echo.  %%~a
 if not exist sstoolsupdate md sstoolsupdate
 cd sstoolsupdate
