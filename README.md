@@ -1,5 +1,6 @@
 # Welcome to SysShivt tools official download server.
-## tiktok: @shivtershivtik25
+## What is SysShivt tools?
+### SysShivt tools is an operationg system running in Windows Command Prompt [CMD] using Batch files.
 
 ## Latest version: 3.1.4
 
