@@ -2,8 +2,6 @@
 ## What is SysShivt tools?
 SysShivt tools is an operating system running in Windows Command Prompt [CMD] using Batch files.
 
-## Latest version: 3.1.4
-
 # How to install sysshivt tools
 ```
 You need SSVM 2.4.2 to 2.5.0 to install the latest version
