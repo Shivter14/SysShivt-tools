@@ -1,6 +1,8 @@
 # Welcome to the official SysShivt tools download server.
 ## What is SysShivt tools?
 SysShivt tools is an operating system running in Windows Command Prompt [CMD] using Batch files.
+## Why are all the versions in zip files?
+That is becose SysShivt tools uses this repository as a download server so it can detect updates and automatically install them. [It's kinda cool considering it's all done by batch files]
 
 # How to install sysshivt tools
 ```
