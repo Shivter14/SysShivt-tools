@@ -32,6 +32,6 @@ How to install SysShivt tools:
 11: Press any key to install SysShivt tools
 After installing sysshivt tools, just boot into the SSVM
 virtual drive selected [If you didn't install SysShivt
-tools to the C drive, spam any key to enter the boot
-menu]
+tools to the C drive, Spam any key to enter the boot
+menu.]
 ```
