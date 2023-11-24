@@ -22,12 +22,12 @@ How to install SysShivt tools:
     (it should automatically enter the full path of the
     zip file. If it doesn't, just type the full path of
     the zip file manually.)
-7:  Press ENTER to continue to the installer
+7:  Press ENTER to continue to the installer.
 8:  Now the installer will ask you what version you want
     to install. Type "sysshivt-tools" and press ENTER.
-9:  Press Y to continue
+9:  Press Y to continue.
 10: Select a SSVM virtual drive you want to install
-    SysShivt tools to (Theese drives are just virtual
+    SysShivt tools to. (Theese drives are just virtual
     drives stored in the SSVM directory) (Recommended: C)
 11: Press any key to install SysShivt tools
 After installing sysshivt tools, just boot into the SSVM
