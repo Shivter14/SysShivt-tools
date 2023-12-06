@@ -1,0 +1,2 @@
+[0m[2m[[0m[94m06.12.2023, 20:10:17,78[0m[2m] [0m[2m[[0m[95mSSTKRNL[0m[2m] [0m[1mStarting SysShivt tools. . . 
+[0m[2m[[0m[94m06.12.2023, 20:10:17,80[0m[2m] [0m[2m[[0m[95mSSTKRNL[0m[2m] [0m[1mLoading "sysshivt-tools\sstsession.cmd". . . 
