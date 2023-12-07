@@ -43,9 +43,9 @@ for /f "delims=" %%a in ('type "%txt.file%"') do (
 set /a txt.con.ls=0
 set /a txt.con.le=%txt.con.ls%+%txt.boxH%-3
 :main
-call batbox %txt.box% /g %txt.boxX% %txt.boxY% /c 0x9f /a 0 /a 30 /d "  " /a 31 /a 0 /c 0xbf /d " Reload " /g %txt.eabX% %txt.boxY% /c 0xcf /d " X " /g %txt.menu% %txt.boxY% /c 0x%sst.window.TIcolor%%sst.window.BGcolor%
+call batbox %txt.box% /g %txt.boxX% %txt.boxY% /c 0x9f /a 32 /a 30 /d "  " /a 31 /a 32 /c 0xbf /d " Reload " /g %txt.eabX% %txt.boxY% /c 0xcf /d " X " /g %txt.menu% %txt.boxY% /c 0x%sst.window.TIcolor%%sst.window.BGcolor%
 set txt.bar=
-for /l %%a in (-3 1 %txt.mnbr%) do set txt.bar=!txt.bar! /a 0
+for /l %%a in (-3 1 %txt.mnbr%) do set txt.bar=!txt.bar! /a 32
 call batbox %txt.bar% /g %txt.menu% %txt.boxY% /d " ~:!txt.name:~0,%txt.mnbr%!"
 for /l %%a in (%txt.con.ls% 1 %txt.con.le%) do (
 	set /a txt.temp=%%a-%txt.con.ls%
