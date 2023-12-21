@@ -152,6 +152,7 @@ echo.== SysShivt tools kernel features ==> "%sst.temp%\kernelfeatures.cww"
 for %%a in (%sst.krnlfeatures%) do echo.%%~a >> "%sst.temp%\kernelfeatures.cww"
 call sftm /store "%sst.temp%\kernelfeatures.cww" /sst.dir kernelfeatures.cww /f /s
 del "%sst.temp%\kernelfeatures.cww" > nul
+call sftm /store "%sst.dir%\assets\pack.mti" /sst.dir/assets pack.mti /f /s
 if "%sst.logsonstartup%" neq "True" call :loadingtext "Loading file icons into memory"
 for /f "delims=" %%a in ('dir /b "%sst.dir%\assets\icons"') do (
 	if "%sst.logsonstartup%" equ "True" call :safetext "[Phase3] Loading file icon: %%~a"
@@ -173,6 +174,7 @@ for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] windowtico
 for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] windowfgcolor "') do for /f "tokens=1 delims=\" %%c in ("%%~a") do if "%%~c" equ "%sst.window.cwtroot:~0,-1%" set "sst.window.FGcolor=%%~b"
 for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] windowbgcolor "') do for /f "tokens=1 delims=\" %%c in ("%%~a") do if "%%~c" equ "%sst.window.cwtroot:~0,-1%" set "sst.window.BGcolor=%%~b"
 for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] windowttcolor "') do for /f "tokens=1 delims=\" %%c in ("%%~a") do if "%%~c" equ "%sst.window.cwtroot:~0,-1%" set "sst.window.TTcolor=%%~b"
+for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] windowtxcolor "') do for /f "tokens=1 delims=\" %%c in ("%%~a") do if "%%~c" equ "%sst.window.cwtroot:~0,-1%" set "sst.window.TXcolor=%%~b"
 for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] taskbarbgcolor "') do for /f "tokens=1 delims=\" %%c in ("%%~a") do if "%%~c" equ "%sst.window.cwtroot:~0,-1%" set "sst.startmenu.tbbgcolor=%%~b"
 for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] taskbarfgcolor "') do for /f "tokens=1 delims=\" %%c in ("%%~a") do if "%%~c" equ "%sst.window.cwtroot:~0,-1%" set "sst.startmenu.tbfgcolor=%%~b"
 for /f "tokens=1,3" %%a in ('type "%sst.dir%\settings.cwt" ^| find "] taskbarbtcolor "') do for /f "tokens=1 delims=\" %%c in ("%%~a") do if "%%~c" equ "%sst.window.cwtroot:~0,-1%" set "sst.startmenu.tbbtcolor=%%~b"
