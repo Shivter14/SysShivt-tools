@@ -1,0 +1,6 @@
+[0] list key
+[0\0] LegacyExplorer systemapps ssexplorer.cmd
+[0\1] Calculator systemapps calculator.cmd
+[0\2] Brun systemapps brun.cmd
+[0\3] Notepad systemapps notepad.cmd
+[0\4] FDCExplorer systemapps fdcexplorer.cmd

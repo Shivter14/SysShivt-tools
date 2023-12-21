@@ -1,0 +1,16 @@
+  SysShivt tools Update Log
+ ===========================
+[21 Dec 2023] SysShivt tools 3.2.p Pre-Release 3
+- Added changelogs!
+- Finnally added wallpaper centering on custom resolutions.
+- Changed the window.cmd API:
+  - Added '/buttons' argument. [Big change^!]
+  - Added optimalizations.
+- Completely rewrote the desktop. Multi-tasking potential.
+- Updated FDCexplorer to support browzing SFTM directories
+  (directories inside RAM), witch also means SSTFS support.
+Bugfixes:
+- Fixed CWTedit window controlls not rendering properly.
+- Fixed TXT window controlls not rendering properly.
+- Fixed FDCexplorer window controlls not rendering
+  properly.
