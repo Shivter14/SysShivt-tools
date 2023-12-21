@@ -149,7 +149,7 @@ if "%sst.mvc.errorlevel%" neq "CHAR" (
 	if "%sst.errorlevel%" equ "100" if "%sst.window.selected%" neq "%sst.window.buttoncount%" set /a sst.window.selected=%sst.window.selected%+1
 	if "%sst.errorlevel%" equ "32" (
 		set sst.errorlevel=%sst.window.selected%
-		exit /b
+		goto end
 	)
 )
 goto \generateheader
