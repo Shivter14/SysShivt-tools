@@ -23,7 +23,7 @@ How to install SysShivt tools:
     zip file. If it doesn't, just type the full path of
     the zip file manually.)
 
-=== ON DEV/CANARY BUILDS (Ignore the following 2 steps if you aren't installing Dev/Canary builfd)
+=== ON DEV/CANARY BUILDS (Ignore the following 2 steps if you aren't installing a Dev/Canary build)
 7:  Press ENTER to continue to the installer.
 8:  Now the installer will ask you what version you want
     to install. Type "sysshivt-tools" and press ENTER.
