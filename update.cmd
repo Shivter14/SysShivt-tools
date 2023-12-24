@@ -1,4 +1,5 @@
 @echo off
+set sst.update=
 set sst.updatever=3.2.0
 set sst.updatebuild=2423
 set sst.updatefile=SysShivt-tools-3-2-0-%sst.updatebuild%.zip
@@ -30,7 +31,7 @@ call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/%sst.upd
 if "%sst.updateargs%" neq "/silent" if not exist "%sst.updatefile%" (
   echo.  Download failed! Press any key to exit. . .
   pause>nul
-) else start .
+) else if %sst.build% lss 2423 start .
 set sst.update=True
 goto end
 :UpToLate
