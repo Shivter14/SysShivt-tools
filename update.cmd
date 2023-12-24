@@ -28,9 +28,9 @@ if not exist sstoolsupdate md sstoolsupdate
 cd sstoolsupdate
 if exist "%sst.updatefile%" del "%sst.updatefile%"
 call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/%sst.updatefile%" %sst.updatefile%
-if "%sst.updateargs%" neq "/silent" if not exist "%sst.updatefile%" (
-  echo.  Download failed! Press any key to exit. . .
-  pause>nul
+if not exist "%sst.updatefile%" (
+  echo.  Download failed! Check your internet connection and try again.
+  exit /b
 ) else if %sst.build% lss 2423 start .
 set sst.update=True
 goto end
@@ -41,7 +41,6 @@ echo.    you might consider checking out https://github.com/Shivter14/sysshivt-t
 echo.    (the download server) where you can even download in-dev canary builds.
 echo.  * Latest Dev/Pre-release build: %sst.latestdevbuild%
 echo.  * Latest Canary build: %sst.latestcanarybuild%
-if "%sst.updateargs%" neq "/silent" pause
 goto end
 :canary-outdated
 for %%a in (
