@@ -1,17 +1,25 @@
 @echo off
 set sst.updatever=3.2.0
 set sst.updatebuild=2423
-set sst.updatefile=SysShivt-tools-3-1-4-%sst.updatebuild%.zip
+set sst.updatefile=SysShivt-tools-3-2-0-%sst.updatebuild%.zip
 set sst.updateargs=%~1
-set sst.latestdevbuild=Not avaliable
-set sst.latestcanarybuild=Not avaliable
+set sst.latestdevbuild=2423
+set sst.latestcanarybuild=2423
+set sst.devupdatefile=SysShivt-tools-3-2-i-%sst.latestdevbuild%.zip
 echo.
-if %sst.build% gtr %sst.updatebuild% goto dev
+if %sst.build% gtr %sst.updatebuild% (
+  if %sst.build% lss %sst.latestdevbuild% goto dev-outdated
+  if %sst.build% gtr %sst.latestdevbuild% (
+    if %sst.build% lss %sst.latestcanarybuild% goto canary-outdated
+    goto canary
+  )
+  goto dev
+)
 if "%sst.build%" equ "%sst.updatebuild%" goto UpToLate
 for %%a in (
   "New update is avalible."
-  "Current version: %sst.ver%"
-  "Latest version: %sst.updatever%"
+  "Current version: SysShivt tools %sst.ver% build %sst.build%"
+  "Latest stable version: SysShivt tools %sst.updatever% build %sst.updatebuild%"
   ""
   "Downloading the latest version. . ."
  ) do echo.  %%~a
@@ -34,10 +42,45 @@ echo.  * Latest Dev/Pre-release build: %sst.latestdevbuild%
 echo.  * Latest Canary build: %sst.latestcanarybuild%
 if "%sst.updateargs%" neq "/silent" pause
 goto end
+:canary-outdated
+for %%a in (
+  "WARNING: You are running an outdated canary build."
+  "    That means you should upgrade to the latest"
+  "    canary build for bugfixes and new features."
+  "    Download the latest canary build from https://github.com/Shivter14/SysShivt-tools/dev"
+  "  Current version: SysShivt tools %sst.ver% build %sst.build% [%sst.subvinfo%]"
+  "  Latest stable version: %sst.updatever%"
+  "  Latest Dev build: %sst.latestdevbuild%"
+  "  Latest Canary build: %sst.latestcanarybuild%"
+) do echo.%%~a
+exit /b
+:canary
+for %%a in (
+  "You are running the latest canary build."
+  "Current version: SysShivt tools %sst.ver% build %sst.build% [%sst.subvinfo%]"
+  "Latest stable version: %sst.updatever%"
+  "Latest Dev build: %sst.latestdevbuild%"
+  "Latest Canary build: %sst.latestcanarybuild%"
+) do echo.  %%~a
+exit /b
+:dev-outdated
+for %%a in (
+  "WARNING: You are running an outdated dev/pre-release build."
+  "    That means you should upgrade to the latest"
+  "    dev/pre-release build for bugfixes and new features."
+  "    Download latest builds at https://github.com/Shivter14/SysShivt-tools"
+  "  Current version: SysShivt tools %sst.ver% build %sst.build% [%sst.subvinfo%]"
+  "  Latest stable version: %sst.updatever%"
+  "  Latest Dev build: %sst.latestdevbuild%"
+  "  Latest Canary build: %sst.latestcanarybuild%"
+) do echo.%%~a
+exit /b
 :dev
 for %%a in (
-  "You are running the latest developer edition."
-  "Current version: %sst.ver%"
-  "Latest version: %sst.updatever%"
+  "You are running the latest dev/pre-release build."
+  "Current version: SysShivt tools %sst.ver% build %sst.build% [%sst.subvinfo%]"
+  "Latest stable version: %sst.updatever%"
+  "Latest Dev build: %sst.latestdevbuild%"
+  "Latest Canary build: %sst.latestcanarybuild%"
 ) do echo.  %%~a
 :end
