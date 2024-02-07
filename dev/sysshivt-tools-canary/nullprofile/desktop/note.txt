@@ -1,8 +1,0 @@
-You have been logged into a system account, becose the
-system cloud not vertify the session. It is likely becose
-the userprofile you have logged into is invalid, or the
-system file login-system.cmd is missing. Or you just typed
-a secret code on the login screen that logged you into
-this account.
-...
-- *some mysterius being 2023*

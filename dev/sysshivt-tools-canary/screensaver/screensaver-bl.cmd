@@ -1,1 +1,0 @@
-@call screensaver-b.cmd
