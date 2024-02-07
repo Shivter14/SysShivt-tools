@@ -5,7 +5,7 @@ set sst.updatebuild=2423
 set sst.updatefile=SysShivt-tools-3-2-0-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 set sst.latestdevbuild=2425
-set sst.latestcanarybuild=2429
+set sst.latestcanarybuild=2607
 set sst.devupdatefile=SysShivt-tools-3-2-i-%sst.latestdevbuild%.zip
 echo.
 if %sst.build% gtr %sst.updatebuild% (
