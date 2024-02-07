@@ -4,7 +4,6 @@
 "systemapps\update.cmd"
 "lang\default.cww"
 "core\cmdwiz.exe"
-"core\cmdmenusel.exe"
 "core\setres.cmd"
 "core\mti.cmd"
 "core\mtc.cmd"
