@@ -1,0 +1,58 @@
+  SysShivt tools Update Log
+ ===========================
+""
+[07 Feb 2024] SysShivt tools 3.2.i build 2607
+- Changed the bootscreen. Now centered.
+- Changed badshutdown.cmd and SysShivt tools recovery to use
+  the window.cmd API.
+- General changes to the overall UI were made to make use of
+  the updated window.cmd API.
+- Changed the window.cmd API:
+  - Added 'sst.window.buttonsmode', 'sst.window.buttonsoffset',
+    'sst.window.buttonsspacing'.
+	Type 'window.cmd /?' for more info.
+- Added 'legacylogsonstartup' key with default value 'False' to
+  'systemsettings' in settings.cwt. It's purpose is to enable
+  a plain text loading screen from older versions.
+- Changed the boot sequence: On first boot, packages will
+  install only after checking for missing files.
+Bugfixes:
+- Fixed the OOBE not handeling missing packages properly.
+- Fixed the installer's Exit button not doing anything.
+- Fixed the 'bgdelay' key in settings.cwt not doing anything.
+""
+[24 Dec 2023] SysShivt tools update
+- SysShivt tools update now displays and detects more
+  information about dev/pre-release and canary builds.
+""
+[23 Dec 2023] SysShivt tools 3.2.0
+* Hello SysShivt tools users. This is an early christmas present,
+  i decided to release this version erarlier than i planned to,
+  to make this a cristmas present.
+- Added changelogs.
+- Finnally added wallpaper centering on custom resolutions.
+- Changed the window.cmd API:
+  - Added '/buttons' argument. [Big change^!]
+  - Added optimalizations.
+- Completely rewrote the desktop. Multi-tasking potential.
+  Introducing 'sstenv.cmd': The new desktop and multi-tasking API. There are
+  no programs except the desktop currently using this feature, but we might
+  see it being used in the future.
+- Updated FDCexplorer to support browzing SFTM directories
+  (directories inside RAM), witch also means SSTFS support.
+- Completely changed the OOBE
+- Added Administrator accounts witch are required for
+  creating new userprofiles from now on.
+- Changed the startup log system.
+  You will notice it once you go into safe mode.
+- Improved startup time.
+- Improved the installer / recovery mode to use the updated window API.
+Bugfixes:
+- Fixed CWTedit window controlls not rendering properly.
+- Fixed TXT window controlls not rendering properly.
+- Fixed FDCexplorer window controlls not rendering properly.
+- Fixed the desktop being unusable when 'sstenv.cmd' is not
+  running in the system directory
+- Fixed TXT not rendering the botton 2 lines.
+""
+* This changelog contains changes made after 19. Dec 2023
