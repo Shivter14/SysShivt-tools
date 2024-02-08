@@ -7,6 +7,7 @@ set sst.updateargs=%~1
 set sst.latestdevbuild=2607
 set sst.latestcanarybuild=2607
 set sst.devupdatefile=SysShivt-tools-3-2-i-%sst.latestdevbuild%.zip
+if not defined sst.build exit /b
 echo.
 if %sst.build% gtr %sst.updatebuild% (
   if %sst.build% lss %sst.latestdevbuild% goto dev-outdated
