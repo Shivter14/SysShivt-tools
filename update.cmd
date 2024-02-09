@@ -1,8 +1,8 @@
 @echo off
 set sst.update=
-set sst.updatever=3.2.1
-set sst.updatebuild=2609
-set sst.updatefile=SysShivt-tools-3-2-1-%sst.updatebuild%.zip
+set sst.updatever=3.2.0
+set sst.updatebuild=2423
+set sst.updatefile=SysShivt-tools-3-2-0-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 set sst.latestdevbuild=2607
 set sst.latestcanarybuild=2607
