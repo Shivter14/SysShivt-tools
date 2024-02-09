@@ -64,10 +64,10 @@ if not exist upgrade_filelist.sstenv (
 	exit /b
 )
 cd "%sst.dir%"
-echo.>restart.txt
-echo.>shutdown.txt
 for %%a in ("boxY=1" "title=SysShivt tools update" "args=/displayonly" "line2=If the system does not restart in a few seconds," "line3=Please restart it manually.") do set "sst.window.%%~a"
 call window.cmd
+echo.>restart.txt
+echo.>shutdown.txt
 timeout 5 /nobreak > nul
 for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
 	if exist "%%~a" del /f /q "%%~a"
