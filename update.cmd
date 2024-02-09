@@ -1,8 +1,8 @@
 @echo off
 set sst.update=
-set sst.updatever=3.2.0
-set sst.updatebuild=2423
-set sst.updatefile=SysShivt-tools-3-2-0-%sst.updatebuild%.zip
+set sst.updatever=3.2.1
+set sst.updatebuild=2609
+set sst.updatefile=SysShivt-tools-3-2-1-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 set sst.latestdevbuild=2607
 set sst.latestcanarybuild=2607
@@ -34,7 +34,45 @@ if not exist "%sst.updatefile%" (
   exit /b
 ) else if %sst.build% lss 2423 start .
 set sst.update=True
-goto end
+
+@echo off
+if %sst.build% lss 2423 (
+	echo.Upgrading reqires at least:
+	echo.SysShivt tools 3.2.0 build 2423.
+	exit /b
+)
+for %%a in ("title=SysShivt tools update" "height=7" "args=/buttons" "line2=There is a system update avaliable"
+	"line3=* If you choose to update, your system will restart."
+) do set "sst.window.%%~a"
+set sst.window.buttons="Update" "Update later"
+call window
+if "%sst.errorlevel%" neq "0" exit /b
+call setres /d
+if not exist "%sst.temp%\sstoolsupdate" (
+	cd "%sst.temp%"
+	md sstoolsupdate
+)
+cd "%sst.temp%\sstoolsupdate"
+if ERRORLEVEL 1 exit 255
+call 7za.exe x "%sst.updatefile%" > nul
+if not exist upgrade_filelist.sstenv (
+	for %%a in ("title=SysShivt tools update" "height=7" "args=/buttons" "line2=Update failed:" "line3=upgrade_filelist.sstenv was not found"
+	) do set "sst.window.%%~a"
+	set sst.window.buttons="OK"
+	call window
+	exit /b
+)
+cd "%sst.dir%"
+call cmd /c shutdown.cmd /restart 1 /nogui
+timeout 1 /nobreak > nul
+for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
+	if exist "%%~a" del /f /q "%%~a"
+	if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
+) > nul
+timeout 1 /nobreak > nul
+Exit
+
+
 :UpToLate
 echo.  You are up to date. [build: %sst.updatebuild%]
 echo.  * If you want to try beta/pre-release builds of SysShivt tools,
