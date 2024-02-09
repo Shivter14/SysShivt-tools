@@ -41,8 +41,10 @@ if %sst.build% lss 2423 (
 	echo.SysShivt tools 3.2.0 build 2423.
 	exit /b
 )
-for %%a in ("title=SysShivt tools update" "height=7" "args=/buttons" "line2=There is a system update avaliable"
+call setres
+for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable"
 	"line3=* If you choose to update, your system will restart."
+	"line4=New version: %sst.updatever% build %sst.updatebuild%"
 ) do set "sst.window.%%~a"
 set sst.window.buttons="Update" "Update later"
 call window
