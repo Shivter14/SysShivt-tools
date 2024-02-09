@@ -35,7 +35,6 @@ if not exist "%sst.updatefile%" (
 ) else if %sst.build% lss 2423 start .
 set sst.update=True
 
-@echo off
 if %sst.build% lss 2423 (
 	echo.Upgrading reqires at least:
 	echo.SysShivt tools 3.2.0 build 2423.
