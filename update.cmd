@@ -65,13 +65,13 @@ if not exist upgrade_filelist.sstenv (
 )
 cd "%sst.dir%"
 call cmd /c shutdown.cmd /restart 1
-timeout 1 /nobreak > nul
+for %%a in ("title=SysShivt tools update" "args=/displayonly" "line2=If the system does not restart in a few seconds," "line3=Please restart it manually.") do set "sst.window.%%~a"
+start /b cmd /c window.cmd
+timeout 5 /nobreak > nul
 for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
 	if exist "%%~a" del /f /q "%%~a"
 	if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
 ) > nul
-for %%a in ("title=SysShivt tools update" "args=/displayonly" "line2=If the system does not restart in a few seconds," "line3=Please restart it manually.") do set "sst.window.%%~a"
-call window
 timeout 1 /nobreak > nul
 Exit
 
