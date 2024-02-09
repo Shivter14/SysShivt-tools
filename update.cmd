@@ -25,7 +25,8 @@ for %%a in (
   ""
   "Downloading the latest version. . ."
  ) do echo.  %%~a
-if not exist sstoolsupdate md sstoolsupdate
+if exist sstoolsupdate rd /s /q sstoolsupdate > nul
+md sstoolsupdate
 cd sstoolsupdate
 if exist "%sst.updatefile%" del "%sst.updatefile%"
 call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/%sst.updatefile%" %sst.updatefile%
