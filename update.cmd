@@ -70,7 +70,7 @@ call window.cmd
 echo.>restart.txt
 echo.>shutdown.txt
 cd "%sst.temp%"
-start /b cmd /c updatetmp.cmd /sstupdate
+start /b cmd /c %0 /sstupdate
 call shutdown.cmd /restart 3
 :sstupdate
 cd "%sst.dir%"
