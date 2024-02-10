@@ -65,7 +65,7 @@ if not exist upgrade_filelist.sstenv (
 	exit /b
 )
 cd "%sst.dir%"
-for %%a in ("boxY=1" "title=SysShivt tools update" "args=/displayonly" "line2=If the system does not restart in a few seconds," "line3=Please restart it manually.") do set "sst.window.%%~a"
+for %%a in ("boxY=1" "height=7" "title=SysShivt tools update" "args=/displayonly" "line2=If the system does not restart in a few" "line3=seconds, Please restart it manually.") do set "sst.window.%%~a"
 call window.cmd
 echo.>restart.txt
 echo.>shutdown.txt
