@@ -47,7 +47,7 @@ if %sst.build% lss 2419 (
 	exit /b
 )
 call setres
-for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable [#5]"
+for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable [#6]"
 	"line3=* If you choose to update, your system will restart."
 	"line4=New version: %sst.updatever% build %sst.updatebuild%"
 ) do set "sst.window.%%~a"
@@ -84,8 +84,10 @@ for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sst
 	if "%%~a" equ "sstsession.cmd" (
 		copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" sstsession_update.cmd
 		for %%a in (
-			"@echo off"
-			"(" "echo.Updating SysShivt tools. . ." "del /f /q sstsession.cmd" "ren sstsession_update.cmd sstsession.cmd" "copy nul temp\fastreboot.cww" "exit" ")"
+			"@echo off" "(" "color 0f" "cls" "echo.Updating SysShivt tools. . ."
+			"del /f /q sstsession.cmd" "ren sstsession_update.cmd sstsession.cmd"
+			"if exist crash.txt del crash.txt" "if exist crashed.txt del crashed.txt" "copy nul temp\fastreboot.cww"
+			"if not exist shutdown.txt copy nul shutdown.txt" "exit" ")"
 		) do echo.%%~a>>sstsession.cmd
 	) else if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
 ) > nul
