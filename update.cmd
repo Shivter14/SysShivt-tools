@@ -89,9 +89,10 @@ for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sst
 		) do echo.%%~a>>sstsession.cmd
 	) else if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
 ) > nul
+if exist crashed.txt del crashed.txt
 timeout 1 /nobreak > nul
+if exist crashed.txt del crashed.txt
 Exit 0
-
 
 :UpToLate
 echo.  You are up to date. [build: %sst.updatebuild%]
