@@ -1,5 +1,9 @@
 @echo off
-if "%~1" equ "/sstupdate" goto sstupdate
+if "%~1" equ "/sstupdate" (
+	color 1f
+	cls
+	goto sstupdate
+)
 set sst.update=
 set sst.updatever=3.2.1
 set sst.updatebuild=2609
