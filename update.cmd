@@ -72,10 +72,19 @@ echo.>shutdown.txt
 timeout 5 /nobreak > nul
 for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
 	if exist "%%~a" del /f /q "%%~a"
-	if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
+	if "%%~a" equ "sstsession.cmd" (
+		copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" sstsession_update.cmd
+		for %%a in (
+			"@echo off"
+			"(del /f /q sstsession.cmd"
+			"ren sstsession_update.cmd sstsession.cmd"
+			"copy nul fastreboot.cww"
+			")"
+		) do echo.%%~a>>sstsession.cmd
+	) else if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
 ) > nul
 timeout 1 /nobreak > nul
-Exit
+Exit 0
 
 
 :UpToLate
