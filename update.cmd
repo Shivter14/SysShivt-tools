@@ -79,6 +79,7 @@ for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sst
 			"(del /f /q sstsession.cmd"
 			"ren sstsession_update.cmd sstsession.cmd"
 			"copy nul fastreboot.cww"
+			"exit"
 			")"
 		) do echo.%%~a>>sstsession.cmd
 	) else if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
