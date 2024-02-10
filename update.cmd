@@ -43,7 +43,7 @@ if %sst.build% lss 2419 (
 	exit /b
 )
 call setres
-for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable [#1]"
+for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable [#2]"
 	"line3=* If you choose to update, your system will restart."
 	"line4=New version: %sst.updatever% build %sst.updatebuild%"
 ) do set "sst.window.%%~a"
@@ -65,14 +65,15 @@ if not exist upgrade_filelist.sstenv (
 	call window
 	exit /b
 )
-cd "%sst.dir%"
 for %%a in ("boxY=1" "height=7" "title=SysShivt tools update" "args=/displayonly" "line2=If the system does not restart in a few" "line3=seconds, Please restart it manually.") do set "sst.window.%%~a"
 call window.cmd
 echo.>restart.txt
 echo.>shutdown.txt
+cd "%sst.temp%\sstoolsupdate"
 start /b cmd /c update.cmd /sstupdate
 exit
 :sstupdate
+cd "%sst.dir%"
 timeout 3 /nobreak > nul
 for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
 	if exist "%%~a" del /f /q "%%~a"
