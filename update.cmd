@@ -78,6 +78,7 @@ start /b cmd /c %0 /sstupdate
 call shutdown.cmd /restart 3
 :sstupdate
 cd "%sst.dir%"
+timeout 3 /nobreak > nul
 for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
 	if exist "%%~a" del /f /q "%%~a"
 	if "%%~a" equ "sstsession.cmd" (
