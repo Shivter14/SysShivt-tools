@@ -1,4 +1,5 @@
 @echo off
+if "%~1" equ "/sstupdate" goto sstupdate
 set sst.update=
 set sst.updatever=3.2.1
 set sst.updatebuild=2609
@@ -69,18 +70,17 @@ for %%a in ("boxY=1" "height=7" "title=SysShivt tools update" "args=/displayonly
 call window.cmd
 echo.>restart.txt
 echo.>shutdown.txt
-timeout 5 /nobreak > nul
+start /b cmd /c update.cmd /sstupdate
+exit
+:sstupdate
+timeout 3 /nobreak > nul
 for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
 	if exist "%%~a" del /f /q "%%~a"
 	if "%%~a" equ "sstsession.cmd" (
 		copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" sstsession_update.cmd
 		for %%a in (
 			"@echo off"
-			"(del /f /q sstsession.cmd"
-			"ren sstsession_update.cmd sstsession.cmd"
-			"copy nul fastreboot.cww"
-			"exit"
-			")"
+			"(" "echo.Updating SysShivt tools. . ." "del /f /q sstsession.cmd" "ren sstsession_update.cmd sstsession.cmd" "copy nul temp\fastreboot.cww" "exit" ")"
 		) do echo.%%~a>>sstsession.cmd
 	) else if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
 ) > nul
