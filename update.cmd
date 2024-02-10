@@ -49,7 +49,7 @@ for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=Ther
 ) do set "sst.window.%%~a"
 set sst.window.buttons="Update" "Update later"
 call window
-if "%sst.errorlevel%" neq "0" exit /b
+if "%sst.errorlevel%" neq "0" exit
 call setres /d
 if not exist "%sst.temp%\sstoolsupdate" (
 	cd "%sst.temp%"
