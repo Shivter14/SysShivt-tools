@@ -42,7 +42,7 @@ if %sst.build% lss 2419 (
 	exit /b
 )
 call setres
-for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable (#1)"
+for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable [#1]"
 	"line3=* If you choose to update, your system will restart."
 	"line4=New version: %sst.updatever% build %sst.updatebuild%"
 ) do set "sst.window.%%~a"
