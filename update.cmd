@@ -97,26 +97,17 @@ if exist crashed.txt del crashed.txt
 Exit 0
 
 :UpToLate
-if %sst.build% geq 2609 (
-	for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60"
-		"line2=You are up to date. [build: %sst.updatebuild%]"
-		"line3=* If you want to try beta/pre-release builds of SysShivt tools,"
-		"line4=  you might consider checking out https://github.com/Shivter14/sysshivt-tools"
-		"line5=(the download server) where you can even download in-dev canary builds."
-		"line6=* Latest Dev/Pre-release build: %sst.latestdevbuild%"
-		"line7=* Latest Canary build: %sst.latestcanarybuild%"
-	) do set "sst.window.%%~a"
-	set sst.window.buttons="OK"
-	call window
-	exit
-)
-echo.  You are up to date. [build: %sst.updatebuild%]
-echo.  * If you want to try beta/pre-release builds of SysShivt tools,
-echo.    you might consider checking out https://github.com/Shivter14/sysshivt-tools
-echo.    (the download server) where you can even download in-dev canary builds.
-echo.  * Latest Dev/Pre-release build: %sst.latestdevbuild%
-echo.  * Latest Canary build: %sst.latestcanarybuild%
-goto end
+for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60"
+	"line2=You are up to date. [build: %sst.updatebuild%]"
+	"line3=* If you want to try beta/pre-release builds of SysShivt tools,"
+	"line4=  you might consider checking out https://github.com/Shivter14/sysshivt-tools"
+	"line5=(the download server) where you can even download in-dev canary builds."
+	"line6=* Latest Dev/Pre-release build: %sst.latestdevbuild%"
+	"line7=* Latest Canary build: %sst.latestcanarybuild%"
+) do set "sst.window.%%~a"
+set sst.window.buttons="OK"
+call window
+exit
 :canary-outdated
 for %%a in (
   "WARNING: You are running an outdated canary build."
