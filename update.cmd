@@ -121,14 +121,16 @@ for %%a in (
 ) do echo.%%~a
 exit /b
 :canary
-for %%a in (
-  "You are running the latest canary build."
-  "Current version: SysShivt tools %sst.ver% build %sst.build% [%sst.subvinfo%]"
-  "Latest stable version: %sst.updatever%"
-  "Latest Dev build: %sst.latestdevbuild%"
-  "Latest Canary build: %sst.latestcanarybuild%"
-) do echo.  %%~a
-exit /b
+for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60"
+	"line2=You are running the latest canary build."
+	"line3=Current version: SysShivt tools %sst.ver% build %sst.build% [%sst.subvinfo%]"
+	"line4=Latest stable version: %sst.updatever%"
+	"line5=Latest Dev/Pre-release build: %sst.latestdevbuild%"
+	"line6=Latest Canary build: %sst.latestcanarybuild%"
+) do set "sst.window.%%~a"
+set sst.window.buttons="OK"
+call window
+exit
 :dev-outdated
 for %%a in (
   "WARNING: You are running an outdated dev/pre-release build."
