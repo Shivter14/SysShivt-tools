@@ -121,12 +121,13 @@ for %%a in (
 ) do echo.%%~a
 exit /b
 :canary
-for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60"
+for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60" "height=11"
 	"line2=You are running the latest canary build."
-	"line3=Current version: SysShivt tools %sst.ver% build %sst.build% [%sst.subvinfo%]"
-	"line4=Latest stable version: %sst.updatever%"
-	"line5=Latest Dev/Pre-release build: %sst.latestdevbuild%"
-	"line6=Latest Canary build: %sst.latestcanarybuild%"
+	"line3=Current version: SysShivt tools %sst.ver% build %sst.build%"
+	"line4=[%sst.subvinfo%]"
+	"line5=Latest stable version: %sst.updatever%"
+	"line6=Latest Dev/Pre-release build: %sst.latestdevbuild%"
+	"line7=Latest Canary build: %sst.latestcanarybuild%"
 ) do set "sst.window.%%~a"
 set sst.window.buttons="OK"
 call window
