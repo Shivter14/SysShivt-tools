@@ -7,6 +7,7 @@ if "%~1" equ "/sstupdate" (
 set sst.update=
 set sst.updatever=3.2.1
 set sst.updatebuild=2609
+set sst.updateinfo=Service Pack 1
 set sst.updatefile=SysShivt-tools-3-2-1-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 set sst.latestdevbuild=2607
@@ -23,13 +24,20 @@ if %sst.build% gtr %sst.updatebuild% (
   goto dev
 )
 if "%sst.build%" equ "%sst.updatebuild%" goto UpToLate
-for %%a in (
-  "New update is avalible."
-  "Current version: SysShivt tools %sst.ver% build %sst.build%"
-  "Latest stable version: SysShivt tools %sst.updatever% build %sst.updatebuild%"
-  ""
-  "Downloading the latest version. . ."
- ) do echo.  %%~a
+if %sst.build% lss 0707 (
+	echo.New update is avaliable.
+	echo.Current version: SysShivt tools %sst.ver% build %sst.build%
+	echo.Latest stable version: SysShivt tools %sst.updatever% build %sst.updatebuild% [%sst.updateinfo%]
+	echo.Updating SysShivt tools. . .
+) else (
+	for %%a in ("title=SysShivt tools update" "width=64" "height=11" "args=/displayonly"
+		"line2=New update is avalible."
+		"line4=Current version: SysShivt tools %sst.ver% build %sst.build%"
+		"line5=Latest stable version: SysShivt tools %sst.updatever% build %sst.updatebuild%"
+		"line7=Please wait. . ."
+ 	) do set "sst.window.%%~a"
+	call window
+)
 if exist sstoolsupdate rd /s /q sstoolsupdate > nul
 md sstoolsupdate
 cd sstoolsupdate
