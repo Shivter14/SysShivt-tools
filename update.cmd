@@ -99,11 +99,13 @@ Exit 0
 :UpToLate
 for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60"
 	"line2=You are up to date. [build: %sst.updatebuild%]"
-	"line3=* If you want to try beta/pre-release builds of SysShivt tools,"
-	"line4=  you might consider checking out https://github.com/Shivter14/sysshivt-tools"
-	"line5=(the download server) where you can even download in-dev canary builds."
-	"line6=* Latest Dev/Pre-release build: %sst.latestdevbuild%"
-	"line7=* Latest Canary build: %sst.latestcanarybuild%"
+	"line3=If you want to try beta/pre-release builds of SysShivt tools,"
+	"line4=you might consider checking out"
+	"line5=https://github.com/Shivter14/sysshivt-tools"
+	"line6=(the download server) where you can even download in-dev"
+	"line7=canary builds."
+	"line8=Latest Dev/Pre-release build: %sst.latestdevbuild%"
+	"line9=Latest Canary build: %sst.latestcanarybuild%"
 ) do set "sst.window.%%~a"
 set sst.window.buttons="OK"
 call window
