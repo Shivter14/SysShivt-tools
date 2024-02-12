@@ -97,7 +97,7 @@ if exist crashed.txt del crashed.txt
 Exit 0
 
 :UpToLate
-for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60"
+for %%a in ("title=SysShivt tools update" "args=/buttons" "width=64"
 	"line2=You are up to date. [build: %sst.updatebuild%]"
 	"line3=If you want to try beta/pre-release builds of SysShivt tools,"
 	"line4=you might consider checking out"
