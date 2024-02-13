@@ -11,7 +11,6 @@ sstsession.cmd
 SST_PE.ssvm
 assets\changelog.txt
 assets\filelist.cww
-assets\programs.cwt
 assets\versionlist.cwt
 boot\autorun.cmd
 boot\LICENCE.txt
