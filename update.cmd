@@ -46,12 +46,12 @@ call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/%sst.upd
 if not exist "%sst.updatefile%" (
   echo.  Download failed! Check your internet connection and try again.
   exit /b
-) else if %sst.build% lss 2423 start .
+) else if %sst.build% lss 1830 start .
 set sst.update=True
 
-if %sst.build% lss 2419 (
+if %sst.build% lss 1830 (
 	echo.Upgrading reqires at least:
-	echo.SysShivt tools 3.2.0 build 2423.
+	echo.SysShivt tools 3.1.4 build 1830.
 	exit /b
 )
 call setres
@@ -60,7 +60,13 @@ for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=Ther
 	"line4=New version: %sst.updatever% build %sst.updatebuild%"
 ) do set "sst.window.%%~a"
 set sst.window.buttons="Update" "Update later"
+if %sst.build% lss 2423 (
+	set sst.window.args=/keystroke
+	set sst.window.line6=Press ENTER to install,
+	set sst.window.line7=or any other key to cancel.
+)
 call window
+if %sst.build% lss 2423 if "%sst.errorlevel%" neq "13" exit
 if "%sst.errorlevel%" neq "0" exit
 call setres /d
 if not exist "%sst.temp%\sstoolsupdate" (
@@ -70,6 +76,10 @@ if not exist "%sst.temp%\sstoolsupdate" (
 cd "%sst.temp%\sstoolsupdate"
 if ERRORLEVEL 1 exit 255
 call 7za.exe x "%sst.updatefile%" > nul
+if %sst.build% lss 2423 (set sst.update.filelist=upgrade_filelist_1830.cww
+) else set sst.update.filelist=upgrade_filelist_2423.cww
+for %%a in ("title=SysShivt tools update" "height=9" "args=/displayonly" "line2=Please wait. . .") do set "sst.window.%%~a"
+call window
 if not exist upgrade_filelist.sstenv (
 	for %%a in ("title=SysShivt tools update" "height=7" "args=/buttons" "line2=Update failed:" "line3=upgrade_filelist.sstenv was not found"
 	) do set "sst.window.%%~a"
