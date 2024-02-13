@@ -66,8 +66,8 @@ if %sst.build% lss 2423 (
 	set sst.window.line7=or any other key to cancel.
 )
 call window
-if %sst.build% lss 2423 if "%sst.errorlevel%" neq "13" exit
-if "%sst.errorlevel%" neq "0" exit
+if %sst.build% lss 2423 (if "%sst.errorlevel%" neq "13" exit
+) else if "%sst.errorlevel%" neq "0" exit
 call setres /d
 if not exist "%sst.temp%\sstoolsupdate" (
 	cd "%sst.temp%"
