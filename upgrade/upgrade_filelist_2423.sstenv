@@ -1,0 +1,19 @@
+badshutdown.cmd
+recovery.cmd
+settings.cwt
+setup.cmd
+sstools.cmd
+sstsession.cmd
+assets\changelog.txt
+assets\filelist.cww
+assets\versionlist.cwt
+boot\autorun.cmd
+boot\LICENCE.txt
+boot\SSVM.cww
+core\shutdown.cmd
+core\sstenv.cmd
+core\window.cmd
+core\Cmdmenusel.exe DELETE
+lang\default.cww
+systemapps\settings.cmd
+systemapps\update.cmd
