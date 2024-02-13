@@ -55,7 +55,7 @@ if %sst.build% lss 1830 (
 	exit /b
 )
 call setres
-for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable [#6]"
+for %%a in ("title=SysShivt tools update" "height=9" "args=/buttons" "line2=There is a system update avaliable [#7]"
 	"line3=* If you choose to update, your system will restart."
 	"line4=New version: %sst.updatever% build %sst.updatebuild%"
 ) do set "sst.window.%%~a"
@@ -76,12 +76,13 @@ if not exist "%sst.temp%\sstoolsupdate" (
 cd "%sst.temp%\sstoolsupdate"
 if ERRORLEVEL 1 exit 255
 call 7za.exe x "%sst.updatefile%" > nul
-if %sst.build% lss 2423 (set sst.update.filelist=upgrade_filelist_1830.cww
-) else set sst.update.filelist=upgrade_filelist_2423.cww
+if %sst.build% lss 2423 (set sst.update.filelist=upgrade_filelist_1830.sstenv
+) else set sst.update.filelist=upgrade_filelist_2423.sstenv
 for %%a in ("title=SysShivt tools update" "height=9" "args=/displayonly" "line2=Please wait. . .") do set "sst.window.%%~a"
 call window
-if not exist upgrade_filelist.sstenv (
-	for %%a in ("title=SysShivt tools update" "height=7" "args=/buttons" "line2=Update failed:" "line3=upgrade_filelist.sstenv was not found"
+call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/upgrade/%sst.update.filelist%" %sst.update.filelist%
+if not exist "%sst.update.filelist%" (
+	for %%a in ("title=SysShivt tools update" "height=7" "args=/buttons" "line2=Update failed:" "line3=%sst.update.filelist% was not found"
 	) do set "sst.window.%%~a"
 	set sst.window.buttons="OK"
 	call window
@@ -97,7 +98,7 @@ call shutdown.cmd /restart 3
 :sstupdate
 cd "%sst.dir%"
 timeout 3 /nobreak > nul
-for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\upgrade_filelist.sstenv"') do (
+for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\%sst.update.filelist%"') do (
 	if exist "%%~a" del /f /q "%%~a"
 	if "%%~a" equ "sstsession.cmd" (
 		copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" sstsession_update.cmd
