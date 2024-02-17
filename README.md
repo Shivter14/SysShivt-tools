@@ -1,6 +1,38 @@
 # Welcome to the official SysShivt tools download server.
 ## What is SysShivt tools?
 SysShivt tools is an advanced operating system running in Windows Command Prompt (CMD) using Batch files. It started in 30.8.2021, and it still hasn't reached it's full potential, since I (Shivter) am the only one working on it.
+SysShivt tools has a lot of tool, like said in the name. These tools include:
+```
+// From 'sstutil.cmd'
+SysShivt tools utility list
+[GTUI = Graphical text user interface]
+  sstutil       Displays the SysShivt tools utility list.
+  cursor        The SysShivt tools Cursor GTUI.
+  window        SysShivt tools window manager.
+  batbox        A core GTUI tool.
+  box           A funcion to make boxes using batbox.
+  line          A funcion to make lines using batbox.
+  spin          A funcion to make DOS-Like loading icons.
+  setres        A funcion to manage the resolution and wallpapers.
+  login-system  The SysShivt tools login system.
+  gettext       The SysShivt tools input funcion.
+  getinput      A core input tool.
+  cwt           .CWT file mapper.
+  txt           A User Interface to open text files.
+  loading       The SysShivt tools loading screen [for backwards compatibility].
+  rgb           An animated smooth line that is used above.
+  bboc          A program that takes batbox input and shifts the positions.
+  shell         A console that keeps variables after exit.
+  fdcore        File displaying core.
+  sftm          A program that can store files to RAM and also read them.
+  sstfs         A filesystem manager based on SFTM.
+  sstenv        SysShivt tools multi-tasking GTUI.
+  mti           MTI file rendering engine. MTI files are pretty much just plain text.
+  shtxf         Shivter's ASCII image rendering engine. SHTXF files are made of numbers of ASCII codes..
+  pbapi         Progress Bar API. Stands for itself....
+  bp1           Opens up .bp1 files with a class-like system..
+  ssp           SysShivt tools package installer..
+```
 ## Why are all the versions in zip files?
 That is becose SysShivt tools uses this repository as a download server so it can detect updates and automatically install them. (It's really cool considering it's all done by batch files)
 
