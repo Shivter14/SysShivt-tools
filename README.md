@@ -33,6 +33,13 @@ SysShivt tools utility list
   bp1           Opens up .bp1 files with a class-like system..
   ssp           SysShivt tools package installer..
 ```
+# It also includes some EXEs and Batch files that you might find in most CMD projects such as:
+- batbox.exe
+- download.exe
+- 7za.exe
+- getlen.cmd
+- box.cmd
+- Caesar.cmd
 ## Why are all the versions in zip files?
 That is becose SysShivt tools uses this repository as a download server so it can detect updates and automatically install them. (It's really cool considering it's all done by batch files)
 
