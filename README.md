@@ -54,20 +54,19 @@ How to install SysShivt tools:
     2:  Extract the zip file.
 2:  Run SSVM. (SSVM.cmd)
 3:  You will get an error becose no OS (SysShivt tools) is installed yet. Press any key.
-4:  Press X, navigate to "Boot" and then select the button "Download the latest version of SysShivt tools"
-6:  Drag the zip file into the SSVM window.
+4:  Press X, navigate to "Boot" and then select the button "Download the latest version of SysShivt tools" (and wait)
 
 === ON DEV/CANARY BUILDS (Ignore the following 2 steps if you aren't installing a Dev/Canary build) ===
-7:  Press ENTER to continue to the installer.
-8:  Now the installer will ask you what version you want
+5:  Press ENTER to continue to the installer.
+6:  Now the installer will ask you what version you want
     to install. Type "sysshivt-tools" and press ENTER.
 
-9:  Click/Select the button "Install" [SPACE].
-10: Select a SSVM virtual drive you want to install
+7:  Click/Select the button "Install" [SPACE].
+8: Select a SSVM virtual drive you want to install
     SysShivt tools to. (Theese drives are just virtual
     drives stored in SSVM'S directory) (Recommended: C)
-11: Press any key to install SysShivt tools.
-12: Wait, Reboot, (Agree to the TOS), Enjoy!
+9: Press any key to install SysShivt tools.
+10: Wait, Reboot, (Agree to the TOS), Enjoy!
 After installing sysshivt tools, just boot into the SSVM
 virtual drive selected (If you didn't install SysShivt
 tools to the C drive, Spam SPACE to enter the boot menu.)
