@@ -10,7 +10,7 @@ set sst.updatebuild=2609
 set sst.updateinfo=Service Pack 1
 set sst.updatefile=SysShivt-tools-3-2-1-%sst.updatebuild%.zip
 set sst.updateargs=%~1
-set sst.latestdevbuild=2607
+set sst.latestdevbuild=2707
 set sst.latestcanarybuild=2607
 set sst.devupdatefile=SysShivt-tools-3-2-i-%sst.latestdevbuild%.ssvm
 if not defined sst.build exit /b
