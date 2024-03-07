@@ -29,10 +29,10 @@ SysShivt tools utility list
   sstfs         A filesystem manager based on SFTM.
   sstenv        SysShivt tools multi-tasking GTUI.
   mti           MTI file rendering engine. MTI files are pretty much just plain text.
-  shtxf         Shivter's ASCII image rendering engine. SHTXF files are made of numbers of ASCII codes..
-  pbapi         Progress Bar API. Stands for itself....
-  bp1           Opens up .bp1 files with a class-like system..
-  ssp           SysShivt tools package installer..
+  shtxf         Shivter's ASCII image rendering engine. SHTXF files are made of numbers of ASCII codes.
+  pbapi         Progress Bar API. Stands for itself...
+  bp1           Opens up .bp1 files with a class-like system.
+  ssp           SysShivt tools package installer.
 ```
 ### It also includes some EXEs and Batch files that you might find in most CMD projects such as:
 - batbox.exe
