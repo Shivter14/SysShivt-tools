@@ -8,7 +8,7 @@ set sst.update=
 set sst.updatever=3.2.1
 set sst.updatebuild=2609
 set sst.updateinfo=Service Pack 1
-set sst.updatefile=SysShivt-tools-3-2-1-%sst.updatebuild%.zip
+set sst.updatefile=SysShivt-tools-%sst.updatever:.=-%-%sst.updatebuild%.zip
 set sst.updateargs=%~1
 set sst.latestdevbuild=2707
 set sst.latestcanarybuild=2607
@@ -116,19 +116,21 @@ if exist crashed.txt del crashed.txt
 Exit 0
 
 :UpToLate
-for %%a in ("title=SysShivt tools update" "args=/buttons" "width=64"
-	"line2=You are up to date. [build: %sst.updatebuild%]"
-	"line3=If you want to try beta/pre-release builds of SysShivt tools,"
-	"line4=you might consider checking out"
-	"line5=https://github.com/Shivter14/sysshivt-tools"
-	"line6=(the download server) where you can even download in-dev"
-	"line7=canary builds."
+call :end-of-life
+exit
+:end-of-life
+for %%a in ("title=SysShivt tools end of life" "args=/buttons" "width=64"
+	"line2=Thank you for using SysShivt tools."
+	"line3=This project was ended in the favor of Shivtanium."
+	"line4=Shivtanium is the successor to SysShivt tools"
+	"line5=For more information, you may check out"
+	"line6=https://github.com/Shivter14/Shivtanium"
 	"line8=Latest Dev/Pre-release build: %sst.latestdevbuild%"
 	"line9=Latest Canary build: %sst.latestcanarybuild%"
 ) do set "sst.window.%%~a"
 set sst.window.buttons="OK"
 call window
-exit
+exit /b
 :canary-outdated
 for %%a in (
   "WARNING: You are running an outdated canary build."
@@ -140,7 +142,8 @@ for %%a in (
   "  Latest Dev build: %sst.latestdevbuild%"
   "  Latest Canary build: %sst.latestcanarybuild%"
 ) do echo.%%~a
-exit /b
+call :end-of-life
+exit
 :canary
 for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60" "height=11"
 	"line2=You are running the latest canary build."
@@ -152,6 +155,7 @@ for %%a in ("title=SysShivt tools update" "args=/buttons" "width=60" "height=11"
 ) do set "sst.window.%%~a"
 set sst.window.buttons="OK"
 call window
+call :end-of-life
 exit
 :dev-outdated
 for %%a in (
@@ -164,6 +168,7 @@ for %%a in (
   "  Latest Dev build: %sst.latestdevbuild%"
   "  Latest Canary build: %sst.latestcanarybuild%"
 ) do echo.%%~a
+call :end-of-life
 exit /b
 :dev
 for %%a in (
@@ -173,4 +178,5 @@ for %%a in (
   "Latest Dev build: %sst.latestdevbuild%"
   "Latest Canary build: %sst.latestcanarybuild%"
 ) do echo.  %%~a
+call :end-of-life
 :end
