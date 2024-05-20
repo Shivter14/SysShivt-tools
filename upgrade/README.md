@@ -1,1 +1,1 @@
-Files in this directory are reqired for upgrading SysShivt tools
+Files in this directory are required for upgrading SysShivt tools
