@@ -1,7 +1,9 @@
 # Welcome to the official SysShivt tools download server.
 ## What is SysShivt tools?
-SysShivt tools is an advanced operating system running in Windows Command Prompt (CMD) using Batch files. It started in 30.8.2021, and it still hasn't reached it's full potential, since I (Shivter) am the only one working on it.
-SysShivt tools has a lot of tool, like said in the name. These tools include:
+
+SysShivt tools is an advanced operating system running in Windows Command Prompt (CMD) using Batch files. It started in 30.8.2021, and this project is currently *being ended* with the successor being Shivtanium.
+
+SysShivt tools has a lot of tools, like said in the name. These tools include:
 ```
 // From 'sstutil.cmd'
 SysShivt tools utility list
@@ -33,15 +35,8 @@ SysShivt tools utility list
   bp1           Opens up .bp1 files with a class-like system.
   ssp           SysShivt tools package installer.
 ```
-### It also includes some EXEs and Batch files that you might find in most CMD projects such as:
-- batbox.exe
-- download.exe
-- 7za.exe
-- getlen.cmd
-- box.cmd
-- Caesar.cmd
 ## Why are all the versions in zip files?
-That is becose SysShivt tools uses this repository as a download server so it can detect updates and automatically install them. (It's really cool considering it's all done by batch files)
+That is because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them.
 
 # How to install sysshivt tools
 ```
@@ -53,7 +48,7 @@ How to install SysShivt tools:
     1:  Download the zip file: "SSVM-2-5-1.zip"
     2:  Extract the zip file.
 2:  Run SSVM. (SSVM.cmd)
-3:  You will get an error becose no OS (SysShivt tools) is installed yet. Press any key.
+3:  You will get an error because no OS (SysShivt tools) is installed yet. Press any key.
 4:  Press X, navigate to "Boot" and then select the button "Download the latest version of SysShivt tools" (and wait)
 
 === ON DEV/CANARY BUILDS (Ignore the following 2 steps if you aren't installing a Dev/Canary build) ===
@@ -63,10 +58,10 @@ How to install SysShivt tools:
 
 7:  Click/Select the button "Install" [SPACE].
 8: Select a SSVM virtual drive you want to install
-    SysShivt tools to. (Theese drives are just virtual
-    drives stored in SSVM'S directory) (Recommended: C)
+    SysShivt tools to. (Those drives are just virtual
+    drives stored in SSVM's directory) (Recommended: C)
 9: Press any key to install SysShivt tools.
 10: Wait, Reboot, (Agree to the TOS), Enjoy!
-After installing sysshivt tools, just boot into the SSVM
-virtual drive selected (If you didn't install SysShivt
-tools to the C drive, Spam SPACE to enter the boot menu.)
+After installing, just boot into the SSVM virtual drive selected.
+(If you didn't install SysShivt tools to the C drive,
+Spam SPACE to enter the boot menu.)
