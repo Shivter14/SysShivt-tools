@@ -1,9 +1,9 @@
-# Welcome to the official SysShivt tools download server.
+# Welcome to the official SysShivt tools Archive
 ## What is _SysShivt tools_?
 
-SysShivt tools is an advanced operating system running in Windows Command Prompt (CMD) using Batch files. It started in 30.8.2021, and this project is currently *being ended* with the successor being Shivtanium.
+SysShivt tools used to be an advanced operating system running in Windows Command Prompt (CMD) using Batch files. It started in 30.8.2021, and this project is currently *being ended* with the successor being Shivtanium.
 
-SysShivt tools has a lot of tools, like said in the name. These tools include:
+SysShivt tools had a lot of tools, like said in the name. These tools include:
 ```
 // From 'sstutil.cmd'
 SysShivt tools utility list
@@ -36,7 +36,7 @@ SysShivt tools utility list
   ssp           SysShivt tools package installer.
 ```
 ## Why are all the versions in zip files?
-That is because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them.
+That is because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them to this day.
 
 # How to install sysshivt tools
 ```
