@@ -1,4 +1,5 @@
 @echo off
+REM DEPRECATED - Only for archive / backward compatibility use
 title Shivter's login system v1.0.1
 if "%~1%" neq "" (
 	title %~1% [Shivter's login system v1.0.1]
