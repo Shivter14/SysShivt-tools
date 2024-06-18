@@ -18,18 +18,21 @@ echo=  1 = Fish Game
 getinput
 set "sst.errorlevel=!errorlevel!"
 set errorlevel=
-if "!sst.errorlevel!" equ "8" goto end
-if "!sst.errorlevel!" equ "27" goto end
-if "!sst.errorlevel!" equ "49" goto installfishgame
+if "!sst.errorlevel!" equ "8" exit /b
+if "!sst.errorlevel!" equ "27" exit /b
+if "!sst.errorlevel!" equ "49" call :installfishgame
 goto start
 :installfishgame
 color 0f
 cls
 if not exist "..\downloads" md "..\downloads"
 pushd ..\downloads
-curl -o fishgame.cmd "https://github.com/Shivter14/SysShivt-tools/raw/main/fish.cmd"
+curl -o fishgame.cmd "https://github.com/Shivter14/SysShivt-tools/raw/main/fish.cmd" || (
+	echo=Something went wrong. Press any key to exit. . .
+	pause>nul
+	exit /b 1
+)
 if not exist "getinput.exe" copy "!sst.dir!\getinput.exe" "getinput.exe"
 cmd /c fishgame.cmd
 popd
-goto start
-:end
+exit /b
