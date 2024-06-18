@@ -1,11 +1,14 @@
 @echo off
-if "%~1%" neq "/b" (
-	echo Usage: start /b cmd /c %0% /b
+REM   Warning: This is *not* a virus!
+REM   It only does a bit of funny with the CMD window and the cursor.
+
+if "%~1" neq "/b" (
+	echo Usage: start /b cmd /c %0 /b
 	goto b
 )
 :a
 set /a sst.random=%random:~-1%+%random:~-1%+%random:~-1%
-if "%sst.random%" geq 25 set sst.random=24
+if %sst.random% gtr 24 set sst.random=24
 set sst.random2=%random:~-2%
 call line %sst.random2% %sst.random% %sst.random2% %sst.random% %random:~-2% %random:~-2%
 if exist "%sst.dir%\shutdown.txt" exit
