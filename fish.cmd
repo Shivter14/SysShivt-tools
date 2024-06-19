@@ -1,4 +1,5 @@
 @echo off
+REM This is an archive of the fish game created for the SysShivt tools store.
 set fg.ver=alpha 1.1.0
 title Fish game %fg.ver%
 if not exist getinput.exe goto /missing_getinput.exe
