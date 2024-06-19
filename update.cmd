@@ -90,8 +90,8 @@ if not exist "%sst.update.filelist%" (
 )
 for %%a in ("boxY=1" "height=7" "title=SysShivt tools update" "args=/displayonly" "line2=If the system does not restart in a few" "line3=seconds, Please restart it manually.") do set "sst.window.%%~a"
 call window.cmd
-echo.>restart.txt
-echo.>shutdown.txt
+copy nul restart.txt > nul 2>&1
+copy nul shutdown.txt > nul 2>&1
 cd "%sst.temp%"
 start /b cmd /c %0 /sstupdate
 call shutdown.cmd /restart 3
@@ -103,10 +103,19 @@ for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\%sst.update.filelist
 	if "%%~a" equ "sstsession.cmd" (
 		copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" sstsession_update.cmd
 		for %%a in (
-			"@echo off" "(" "color 0f" "cls" "echo.Updating SysShivt tools. . ."
-			"del /f /q sstsession.cmd" "ren sstsession_update.cmd sstsession.cmd"
-			"if exist crash.txt del crash.txt" "if exist crashed.txt del crashed.txt" "copy nul temp\fastreboot.cww"
-			"if not exist shutdown.txt copy nul shutdown.txt" "exit" ")"
+			"@echo off"
+			"("
+				"color 0f"
+				"cls"
+				"echo.Updating SysShivt tools. . ."
+				"del /f /q sstsession.cmd"
+				"ren sstsession_update.cmd sstsession.cmd"
+				"if exist crash.txt del crash.txt"
+				"if exist crashed.txt del crashed.txt"
+				"copy nul temp\fastreboot.cww"
+				"if not exist shutdown.txt copy nul shutdown.txt"
+				"exit"
+			")"
 		) do echo.%%~a>>sstsession.cmd
 	) else if "%%~b" neq "DELETE" copy "%sst.temp%\sstoolsupdate\sysshivt-tools\%%~a" "%%~a"
 ) > nul
