@@ -1,6 +1,6 @@
 This folder contains the last canary build of SysShivt tools. You can just download it.
 
-To use this as an installer, run the setup.cmd file in SSVM by entering the command prompt from the boot menu.
+To use this as an installer, run the `setup.cmd` file in SSVM by entering the command prompt from the boot menu.
 
 (Make sure you enter the directory first)
 
