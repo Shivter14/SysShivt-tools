@@ -3,7 +3,7 @@
 
 SysShivt tools used to be an advanced operating system running in Windows Command Prompt (CMD) using Batch files. It started in 30.8.2021, and this project is currently *being ended* with the successor being ![Shivtanium](https://github.com/Shivter14/Shivtanium).
 
-SysShivt tools had a lot of tools, like said in the name. These tools include:
+SysShivt tools had a lot of tools, like said in the name. These tools included:
 ```
 // From 'sstutil.cmd'
 SysShivt tools utility list
@@ -67,4 +67,4 @@ After installing, just boot into the SSVM virtual drive selected.
 Spam SPACE to enter the boot menu.)
 ```
 # What is Micro-SST?
-Micro SST is a very slimmed down version of SysShivt tools that doesn't get updated often. It's just ment to work, and it does. It can be used as a recovery environment. It has been used in the original ![MetroTyper](https://github.com/Shivter14/MetroTyper)
+Micro SST is an old, very slimmed down version of SysShivt tools that doesn't get updated often. It's just ment to work, and it does. It can be used as a recovery environment. It has been used in the original ![MetroTyper](https://github.com/Shivter14/MetroTyper)
