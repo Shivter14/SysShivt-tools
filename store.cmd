@@ -1,4 +1,5 @@
-@echo off & setlocal enabledelayedexpansion
+@echo off & setlocal enableDelayedExpansion
+REM  This is not the original SysShivt tools store, but it's an extended fork of it.
 if not defined sst.ver (
 	echo.This program requires SysShivt tools. Press any key to exit. . .
 	pause>nul
