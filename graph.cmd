@@ -1,5 +1,5 @@
 @echo off
-REM This is an archive of the random graph project.
+REM  This is an archive of the random graph project.
 :truestart
 color 0f
 mode 96,25
