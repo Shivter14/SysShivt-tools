@@ -4,7 +4,7 @@ call :header
 if not defined ssvm.ver (
 	for %%a in (
 		"This program reqires to be run in SSVM version 2.4.2 up to"
-		"2.5.0 recommended." "" "Press any key to exit. . ."
+		"2.5.1 recommended." "" "Press any key to exit. . ."
 	) do echo.  %%~a
 	pause>nul
 	goto exit
@@ -20,7 +20,7 @@ for %%a in (
 if not defined ssti.ssvm (
 	for %%a in (
 		"You are using an incompatible version of SSVM: %ssvm.ver%"
-		"This program recommends to use SSVM version 2.4.2 up to 2.5.0."
+		"This program recommends to use SSVM version 2.4.2 up to 2.5.1."
 		""
 	) do echo.  %%~a
 	choice /m "  Do you want to continue"
@@ -64,8 +64,8 @@ goto exit
 :header
 for %%a in (
 	""
-	"   SysShivt tools setup"
-	"  ======================"
+	"   SysShivt tools [archived] setup"
+	"  ================================="
 	""
 ) do echo.%%~a
 goto end
