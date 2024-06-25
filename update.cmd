@@ -7,12 +7,12 @@ if "%~1" equ "/sstupdate" (
 set sst.update=
 set sst.updatever=3.2.1
 set sst.updatebuild=2609
-set sst.updateinfo=Service Pack 1
-set sst.updatefile=SysShivt-tools-%sst.updatever:.=-%-%sst.updatebuild%.zip
-set sst.updateargs=%~1
+set !sst.updateinfo=Service Pack 1!
+set "sst.updatefile=SysShivt-tools-%sst.updatever:.=-%-%sst.updatebuild%.zip"
+set "sst.updateargs=%~1"
 set sst.latestdevbuild=2707
 set sst.latestcanarybuild=2607
-set sst.devupdatefile=SysShivt-tools-3-2-i-%sst.latestdevbuild%.ssvm
+set "sst.devupdatefile=SysShivt-tools-3-2-i-%sst.latestdevbuild%.ssvm"
 if not defined sst.build exit /b
 echo.
 if %sst.build% gtr %sst.updatebuild% (
