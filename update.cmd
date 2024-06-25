@@ -44,14 +44,14 @@ cd sstoolsupdate
 if exist "%sst.updatefile%" del "%sst.updatefile%"
 call download.exe "https://github.com/Shivter14/SysShivt-tools/raw/main/%sst.updatefile%" %sst.updatefile%
 if not exist "%sst.updatefile%" (
-  echo.  Download failed! Check your internet connection and try again.
+  echo=  Download failed. Check your internet connection and try again.
   exit /b
 ) else if %sst.build% lss 1830 start .
 set sst.update=True
 
 if %sst.build% lss 1830 (
-	echo.Upgrading reqires at least:
-	echo.SysShivt tools 3.1.4 build 1830.
+	echo=Upgrading reqires at least:
+	echo=SysShivt tools 3.1.4 build 1830.
 	exit /b
 )
 call setres
@@ -66,7 +66,8 @@ if %sst.build% lss 2423 (
 	set sst.window.line7=or any other key to cancel.
 )
 call window
-if %sst.build% lss 2423 (if "%sst.errorlevel%" neq "13" exit
+if %sst.build% lss 2423 (
+	if "%sst.errorlevel%" neq "13" exit
 ) else if "%sst.errorlevel%" neq "0" exit
 call setres /d
 if not exist "%sst.temp%\sstoolsupdate" (
