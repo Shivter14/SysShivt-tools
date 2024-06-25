@@ -139,8 +139,8 @@ for %%a in ("title=SysShivt tools end of life" "args=/buttons" "width=64"
 	"line9=Latest Canary build: %sst.latestcanarybuild%"
 ) do set "sst.window.%%~a"
 set sst.window.buttons="OK" "Open link"
-if "%sst.errorlevel%"=="1" start https://github.com/Shivter14/Shivtanium
 call window
+if "%sst.errorlevel%"=="1" start https://github.com/Shivter14/Shivtanium
 exit /b
 :canary-outdated
 for %%a in (
