@@ -41,9 +41,9 @@ set errorlevel=
 :ls-login
 cls
 echo.
-echo.  Welcome %ls.username%.
+echo.  Welcome, %ls.username%.
 echo.
-echo.  Enter password.
+echo.  Enter your password.
 echo.
 echo.  %ls.display%
 getinput
