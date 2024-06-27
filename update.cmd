@@ -190,4 +190,3 @@ for %%a in (
   "Latest Canary build: %sst.latestcanarybuild%"
 ) do echo.  %%~a
 call :end-of-life
-:end
