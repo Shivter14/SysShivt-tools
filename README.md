@@ -3,7 +3,7 @@
 
 SysShivt tools used to be an advanced operating system running in Windows Command Prompt (CMD) using Batch files. It started in 30.8.2021, and this project is currently *being ended*, with the successor being ![Shivtanium](https://github.com/Shivter14/Shivtanium).
 
-SysShivt tools had a lot of tools, like said in the name. These tools included:
+SysShivt tools had a lot of tools, like said in the name; These tools included:
 ```
 // From 'sstutil.cmd'
 SysShivt tools utility list
