@@ -132,7 +132,7 @@ exit
 for %%a in ("title=SysShivt tools end of life" "args=/buttons" "width=64"
 	"line2=Thank you for using SysShivt tools."
 	"line3=This project was ended in the favor of Shivtanium."
-	"line4=Shivtanium is the successor to SysShivt tools"
+	"line4=Shivtanium is the successor to SysShivt tools."
 	"line5=For more information, you may check out"
 	"line6=https://github.com/Shivter14/Shivtanium"
 	"line8=Latest Dev/Pre-release build: %sst.latestdevbuild%"
