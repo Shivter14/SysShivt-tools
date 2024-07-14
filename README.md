@@ -38,7 +38,8 @@ SysShivt tools utility list
 ## Why are all the versions in zip files?
 That is because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them to this day.
 
-# How to install sysshivt tools
+# How do I install SysShivt tools?
+With the help of this archived file:
 ```
 You need SSVM 2.5.1 to install the latest version of SysShivt tools.
 
