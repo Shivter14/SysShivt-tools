@@ -37,7 +37,7 @@ SysShivt tools utility list
   bp1           Opens up .bp1 files with a class-like system.
   ssp           SysShivt tools package installer.
 ```
-## Why are all the versions in zip files?
+# Why are all the versions in zip files?
 That is because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them to this day.
 
 # How do I install SysShivt tools?
