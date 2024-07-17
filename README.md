@@ -5,7 +5,11 @@ SysShivt tools used to be an operating system running in CMD using Batch files.
 
 It started in 30.8.2021, and this project is currently *being ended*, with the successor being ![Shivtanium](https://github.com/Shivter14/Shivtanium).
 
-SysShivt tools had a lot of tools, like said in the name; These tools included:
+# Why are all the versions in zip files?
+That is because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them to this day.
+
+
+### SysShivt tools had a lot of tools, like said in the name; These tools included:
 ```
 // From 'sstutil.cmd'
 SysShivt tools utility list
@@ -37,9 +41,6 @@ SysShivt tools utility list
   bp1           Opens up .bp1 files with a class-like system.
   ssp           SysShivt tools package installer.
 ```
-# Why are all the versions in zip files?
-That is because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them to this day.
-
 # How do I install SysShivt tools?
 With the help of this archived file:
 ```
