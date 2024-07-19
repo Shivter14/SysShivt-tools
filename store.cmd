@@ -8,7 +8,7 @@ if not defined sst.ver (
 :start
 color f0
 cls
-echo=$debug=!sst.errorlevel!
+echo=
 echo=  Welcome to SysShivt tools store, !ls.username!.
 echo=  This store is an archive of old SysShivt tools games.
 echo=  Updated ^& archived by: Shivter
