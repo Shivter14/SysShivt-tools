@@ -16,13 +16,14 @@ echo=  [BACKSPACE] / [ESC] = exit
 echo=
 echo=  Games:
 echo=  1 = Fish Game
+:main
 getinput
 set "sst.errorlevel=!errorlevel!"
 set errorlevel=
 if "!sst.errorlevel!" equ "8" exit /b
 if "!sst.errorlevel!" equ "27" exit /b
 if "!sst.errorlevel!" equ "49" call :installfishgame
-goto start
+goto main
 :installfishgame
 color 0f
 cls
