@@ -27,7 +27,7 @@ goto start
 color 0f
 cls
 if not exist "..\downloads" md "..\downloads"
-pushd ..\downloads
+pushd "..\downloads"
 curl -o fishgame.cmd "https://github.com/Shivter14/SysShivt-tools/raw/main/fish.cmd" || (
 	echo=Something went wrong. Press any key to exit. . .
 	pause>nul
