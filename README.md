@@ -6,8 +6,8 @@ SysShivt tools used to be an operating system running in CMD using Batch files.
 It started in 30.8.2021, and this project is currently *being ended*, with the successor being ![Shivtanium](https://github.com/Shivter14/Shivtanium).
 
 # Why are all the versions in `.zip` files?
-That's because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them to this day.
 
+That's because SysShivt tools uses this repository as a download server so that it can detect updates and automatically install them to this day.
 
 ### SysShivt tools had a lot of tools, like said in the name; These tools included:
 ```
