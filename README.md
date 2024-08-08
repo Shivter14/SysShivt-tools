@@ -74,4 +74,5 @@ Spam SPACE to enter the boot menu.)
 ```
 
 # What is Micro-SST?
+
 Micro-SST is an old & very slimmed down version of SysShivt tools that doesn't get updated often. It's just ment to work, and it does. It can be used as a recovery environment. It has been used in the original ![MetroTyper](https://github.com/Shivter14/MetroTyper).
