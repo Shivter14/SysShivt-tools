@@ -3,7 +3,7 @@
 
 SysShivt tools used to be an operating system running in CMD using Batch files.
 
-It started in 30.8.2021, and this project is currently *being ended*, with the successor being [Shivtanium](https://github.com/Shivter14/Shivtanium).
+It started in 30.8.2021, and this project *has been ended* with the successor being [Shivtanium](https://github.com/Shivter14/Shivtanium).
 
 # Why are all the versions in `.zip` files?
 
