@@ -4,16 +4,15 @@ if "%~1" equ "/sstupdate" (
 	cls
 	goto sstupdate
 )
+if not defined sst.build exit /b
 set sst.update=
 set sst.updatever=3.2.1
-set sst.updatebuild=2609
-set !sst.updateinfo=Service Pack 1!
+set /a "sst.updatebuild=2609, sst.latestdevbuild=2707, sst.latestcanarybuild=2607, sst.build=sst.build"
+
+set "sst.updateinfo=Service Pack 1"
 set "sst.updatefile=SysShivt-tools-%sst.updatever:.=-%-%sst.updatebuild%.zip"
 set "sst.updateargs=%~1"
-set sst.latestdevbuild=2707
-set sst.latestcanarybuild=2607
 set "sst.devupdatefile=SysShivt-tools-3-2-i-%sst.latestdevbuild%.ssvm"
-if not defined sst.build exit /b
 echo.
 if %sst.build% gtr %sst.updatebuild% (
   if %sst.build% lss %sst.latestdevbuild% goto dev-outdated
