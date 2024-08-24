@@ -1,4 +1,2 @@
-@echo off
-type con > print.txt
-type print.txt
-pause>nul
+@copy con print.txt
+@more print.txt
