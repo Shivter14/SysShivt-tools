@@ -22,7 +22,7 @@ if %sst.build% gtr %sst.updatebuild% (
   )
   goto dev
 )
-if "%sst.build%" equ "%sst.updatebuild%" goto UpToLate
+if "%sst.build%" equ "%sst.updatebuild%" goto upToDate
 if %sst.build% lss 0707 (
 	echo.New update is avaliable.
 	echo.Current version: SysShivt tools %sst.ver% build %sst.build%
@@ -122,9 +122,9 @@ for /f "tokens=1,2" %%a in ('type "%sst.temp%\sstoolsupdate\%sst.update.filelist
 if exist crashed.txt del crashed.txt
 timeout 1 /nobreak > nul
 if exist crashed.txt del crashed.txt
-Exit 0
+exit 0
 
-:UpToLate
+:upToDate
 call :end-of-life
 exit
 :end-of-life
