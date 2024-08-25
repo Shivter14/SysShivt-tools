@@ -43,6 +43,8 @@ SysShivt tools utility list
   bp1           Opens up .bp1 files with a class-like system.
   ssp           SysShivt tools package installer.
 ```
+Most of the batch files were created by me, and most EXEs are from Batch-man.
+
 # How do I install SysShivt tools?
 With the help of this archived file:
 ```
